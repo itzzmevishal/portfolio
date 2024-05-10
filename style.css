@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+.word-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+}
+
+.word {
+  position: absolute;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: none;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+.pomegranate {
+  color: #d11b07;
+}
+
+.green {
+  color: #16a085;
+}
+
+.midnight {
+  color: #2c3e50;
+}
+
+.nameV {
+  color: #8400ff;
+}
+
+.nameK {
+  color: #d9044f;
+}
+
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  gap: 15px;
+ 
+  
+}
+
+
+/* project */
+.title{
+  margin: 5rem 0 5rem 5rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+#projectCard {
+  margin: 5rem;
+  display: flex;
+  gap: 1.6rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#card-details{
+ overflow: hidden;
+  height: 0.2rem;
+  width: 20rem;
+ 
+}
+#card-height:hover #card-details{
+  overflow: unset;
+  height: auto;
+  
+}
+
+#card-height{
+  height: auto;
+  width: 23rem;
+}
+
+#projectCard:hover + #card-details{
+  display:block;
+  
+}
+
+/* skills */
+
+.skill-container{
+  display: flex;
+}

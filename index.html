@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Vishal's Portfolio</title>
+</head>
+
+<body>
+  <div class="navbar bg-info-content sticky top-0 z-40">
+    <div class="navbar-start ">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#publication">Publication</a></li>
+          <li><a href="#achievement">Achievement</a></li>
+          <li><a href="#personal-info">Personal Info.</a></li>
+          <li><a href="#contact-me">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="w-10 rounded-full">
+        <img alt="Tailwind CSS Navbar component" src="/photos/Logo.jpg" />
+      </div>
+      <a href="#home" class="btn btn-ghost text-xl">Vishal Kumar</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publication">Publication</a></li>
+        <li><a href="#achievement">Achievement</a></li>
+        <li><a href="#personal-info">Personal Info.</a></li>
+        <li><a href="#contact-me">Contact Me</a></li>
+      </ul>
+    </div>
+
+    <div class="flex mr-5 navbar-end gap-2">
+      <label class="swap swap-rotate">
+        <!-- this hidden checkbox controls the state -->
+        <input type="checkbox" class="theme-controller" value="winter" />
+
+        <!-- sun icon -->
+        <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+        </svg>
+
+        <!-- moon icon -->
+        <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+        </svg>
+      </label>
+    </div>
+  </div>
+
+  <!-- Body  -->
+  <div id="home" class="hero min-h-screen" style="background-image: url('/photos/vishal-background.png')">
+    <div class="hero-content text-center text-base-content">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-7xl font-bold">
+          <span class="nameV">V</span>ishal <span class="nameK">K</span>umar
+        </h1>
+        <div class="text text-5xl mb-5">
+          <p class="word-toggle">
+            <span class="word wisteria">Frontend Developer</span>
+            <span class="word belize">Web Developer</span>
+            <span class="word pomegranate">UI/UX Designer</span>
+            <span class="word green">Problem Solver</span>
+          </p>
+        </div>
+
+        <p class="mb-4 font-semibold">
+          Frontend developer skilled in HTML, CSS, and JavaScript.
+          Specializing in creating user-friendly interfaces and responsive web
+          applications. Passionate about crafting seamless digital experiences
+          that prioritize both aesthetics and functionality.
+        </p>
+        <p class="contact">
+          <a href="https://twitter.com/itzzmevishal" target="blank"><img
+              src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg"
+              alt="itzzmevishal" height="20" width="30" /></a>
+          <a href="https://linkedin.com/in/itzzmevishal" target="blank"><img
+              src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"
+              alt="itzzmevishal" height="20" width="30" /></a>
+          <a href="https://instagram.com/itzzmevishal" target="blank"><img
+              src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg"
+              alt="itzzmevishal" height="20" width="30" /></a>
+          <a href="https://github.com/itzzmevishal" target="blank"><img
+              src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg"
+              alt="itzzmevishal" height="20" width="30" /></a>
+        </p>
+
+        <a href="https://drive.google.com/file/d/1mPiaiQmY7F0tMbVdV-c0ouGxoZjBMH_x/view?usp=drive_link "
+          target="_blank"><button class="btn btn-primary">Download Resume</button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- dividers -->
+  <div style="overflow: hidden">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+      style="fill: #8400ffc4; width: 100%; height: 105px">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+  <!-- projects  -->
+
+  <div id="projects" class="title">Projects</div>
+  <div id="projectCard">
+    <div id="card-height" class="card shadow-xl transition duration-300 ease-in-out delay-300 hover:scale-110">
+      <figure>
+        <img class="h-64 w-96 object-fill shadow-md" src="/photos/15_best_place_in_india.png" alt="Shoes" />
+      </figure>
+      <div class="card-body text-base-content">
+        <h2 class="card-title">15 Best Places in India Website</h2>
+        <div id="card-details">
+          <p>
+            Designed an immersive website highlighting the top 15 places in
+            India.
+          </p>
+          <div class="card-actions justify-end">
+            <a href="https://itzzmevishal.github.io/Best-places-in-India-Website/" target="_blank"><button
+                class="btn btn-primary">Visit site</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="card-height" class="card  shadow-xl transition duration-300 ease-in-out delay-100 hover:scale-110">
+      <figure>
+        <img class="h-64 w-96 object-fill " src="/photos/bubble_finder.png" alt="Shoes" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Spot the Bubble Game</h2>
+        <div id="card-details">
+          <p>Developed an engaging game using HTML, CSS, and JavaScript.</p>
+          <div class="card-actions justify-end ">
+            <a href="https://itzzmevishal.github.io/Bubble_Finder/" target="_blank"><button
+                class="btn btn-primary">Visit site</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="card-height" class="card  shadow-xl transition duration-300 ease-in-out delay-100 hover:scale-110">
+      <figure>
+        <img class="h-64 w-96 object-fill " src="/photos/currency-converter.png" alt="Shoes" />
+      </figure>
+      <div class=" card-body">
+        <h2 class="card-title"> Currency Converter</h2>
+        <div id="card-details">
+          <p>Developed a fully functional currency converter utilizing HTML, CSS, JavaScript, and API
+            integration. This project demonstrates proficiency in front-end web development and API
+            utilization.
+          </p>
+          <div class="card-actions justify-end">
+            <a href="https://itzzmevishal.github.io/Currency_Converter/" target="_blank"><button
+                class="btn btn-primary">Visit site</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="card-height" class="card  shadow-xl transition duration-300 ease-in-out delay-100 hover:scale-110">
+      <figure>
+        <img class="h-64 w-96 object-fill " src="/photos//video-downloader.png" alt="Shoes" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Social Media Video Downloader</h2>
+        <div id="card-details">
+          <p>Developed a React-based web application utilizing Tailwind CSS and Rapid API to facilitate video
+            downloads from Instagram, YouTube, and Facebook.</p>
+          <div class="card-actions justify-end ">
+            <a href="https://ig-downloader-omega.vercel.app/" target="_blank"><button class="btn btn-primary">Visit
+                site</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="card-height" class="card  shadow-xl transition duration-300 ease-in-out delay-100 hover:scale-110">
+      <figure>
+        <img class="h-64 w-96 object-fill " src="/photos/Chat-App.png" alt="Shoes" />
+      </figure>
+      <div class=" card-body">
+        <h2 class="card-title"> Enhanced Chat Application</h2>
+        <div id="card-details">
+          <p>Created a web chat application with ReactJS, Redux Toolkit, Chatengine’s API for user management, and
+            OpenAI’s API for advanced features like chat assist, provides code and auto complete sentences.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="card-height" class="card  shadow-xl transition duration-300 ease-in-out delay-100 hover:scale-110">
+      <figure>
+        <img class="h-64 w-96 object-fill " src="/photos/Iris-scan.png" alt="Shoes" />
+      </figure>
+      <div class=" card-body">
+        <h2 class="card-title"> Stress Level Detection Using IRIS Scanning</h2>
+        <div id="card-details">
+          <p>Doing Research on an innovative stress level detection system using Python and IRIS scanning technology.
+            Leveraged Python’s capabilities to analyse IRIS patterns for stress assessment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <!-- page divider down  -->
+  <div style="overflow: hidden">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
+          fill: #bd11ca9c;
+          width: 100%;
+          height: 105px;
+          transform: rotate(180deg) scaleX(-1);
+        ">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+  <!-- page devider top -->
+  <div style="overflow: hidden">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+      style="fill: #bd11ca9c; width: 100%; height: 105px">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+  <!-- Skills -->
+
+  <div class="flex flex-col my-10 gap-5 h-auto w-full flex-wrap">
+    <div id="skills" class="title">Skills</div>
+    <div class=" grid h-44 mx-20 card bg-base-300 rounded-box ">
+      <p class="mx-10 my-5 font-bold h-auto">Programming</p>
+      <div class="mx-10  flex gap-28 h-40 w-45rem flex-wrap">
+
+        <div class="text-center">
+          <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="./skills-logo/html-5.png"
+              alt="html5" width="80" height="80" /></a>HTML5
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="./skills-logo/css.png"
+              alt="css3" width="80" height="80" /> </a>CSS
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.w3schools.com/js/" target="_blank" rel="noreferrer"> <img src="./skills-logo/js.png"
+              alt="css3" width="80" height="80" /> </a>JavaScript
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.w3schools.com/python/" target="_blank" rel="noreferrer"> <img
+              src="./skills-logo/python.png" alt="css3" width="80" height="80" /> </a>Python
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.w3schools.com/latex/" target="_blank" rel="noreferrer"> <img
+              src="https://static.javatpoint.com/tutorial/latex/images/latex-tutorial.png" alt="css3" width="80"
+              height="80" /> </a>Latex
+        </div>
+      </div>
+    </div>
+
+    <!-- skill-part-2 -->
+    <div class=" grid h-44 mx-20 card bg-base-300 rounded-box ">
+      <p class="mx-10 my-5 font-bold">Frameworks/Libraries</p>
+      <div class="mx-10  flex justify-between h-40 w-45rem flex-wrap">
+
+        <div class="text-center">
+          <a href="https://www.w3schools.com/react/" target="_blank" rel="noreferrer"> <img
+              src="./skills-logo/react.png" alt="html5" width="80" height="80" /></a>ReactJs
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.javatpoint.com/react-redux" target="_blank" rel="noreferrer"> <img
+              src="./skills-logo/redux.png" alt="css3" width="80" height="80" /> </a>Redux
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.w3schools.com/nodejs/" target="_blank" rel="noreferrer"> <img
+              src="./skills-logo/nodejs.png" alt="css3" width="80" height="80" /> </a>NodeJs
+        </div>
+
+        <div class="text-center">
+          <a href="https://expressjs.com/" target="_blank" rel="noreferrer"> <img
+              src="https://images.credly.com/images/1c2c86e1-16ce-4e4d-a425-d1ac96bb026d/express.png" alt="css3"
+              width="80" height="80" /> </a>ExpressJs
+        </div>
+
+        <div class="text-center">
+          <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/bootstrap.png"
+              alt="css3" width="80" height="80" /> </a>Bootstrap
+        </div>
+
+        <div class="text-center">
+          <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/tailwindcss.png"
+              alt="css3" width="80" height="80" /> </a>Tailwind CSS
+        </div>
+
+        <div class="text-center">
+          <a href="https://daisyui.com/" target="_blank" rel="noreferrer"> <img
+              src="https://img.daisyui.com/images/daisyui-logo/daisyui-logomark-1024-1024.png" alt="css3" width="80"
+              height="80" /> </a>DaisyUI
+        </div>
+      </div>
+    </div>
+
+    <!-- skill-part-3 -->
+
+    <div class=" grid h-44 mx-20 card bg-base-300 rounded-box ">
+      <p class="mx-10 my-5 font-bold">Databases</p>
+      <div class="mx-10  flex gap-28 h-40 w-45rem flex-wrap">
+
+        <div class="text-center">
+          <a href="https://www.w3schools.com/mysql/" target="_blank" rel="noreferrer"> <img
+              src="./skills-logo/mysql.png" alt="html5" width="80" height="80" /></a>MySQL
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.w3schools.com/mongodb/" target="_blank" rel="noreferrer"> <img
+              src="./skills-logo/mongodb.png" alt="css3" width="80" height="80" /> </a>MongoDB
+        </div>
+      </div>
+    </div>
+
+    <!-- skill-part-4 -->
+
+    <div class=" grid h-44 mx-20 card bg-base-300 rounded-box ">
+      <p class="mx-10 my-5 font-bold">Tools</p>
+      <div class="mx-10  flex justify-between h-40 w-45rem flex-wrap">
+
+        <div class="text-center">
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"> <img
+              src="https://code.visualstudio.com/assets/images/code-stable.png" alt="html5" width="80"
+              height="80" /></a>VS Code
+        </div>
+
+        <div class="text-center">
+          <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/git.png" alt="css3"
+              width="80" height="80" /> </a>Git
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.canva.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/canva.png"
+              alt="css3" width="80" height="80" /> </a>Canva
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.sketch.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/sketch.png"
+              alt="css3" width="80" height="80" /> </a>Sketch
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.office.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/msOffice.png"
+              alt="css3" width="80" height="80" /> </a>MS Office
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img
+              src="./skills-logo/photoshop.png" alt="photoshop" width="80" height="80" /> </a>Photoshop
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- page divider up -->
+  <div style="overflow: hidden">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
+          fill: #8400ffc4;
+          width: 100%;
+          height: 105px;
+          transform: rotate(180deg) scaleX(-1);
+        ">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+  <!-- page divider down -->
+
+  <div style="overflow: hidden;">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+      style="fill: #8400ffc4; width: 100%; height: 122px; transform: scaleX(-1);">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+  <!-- education -->
+
+  <div id="education" class="title">Education</div>
+
+  <div class="mx-32 my-28">
+    <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+      <li>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono italic">2021-Present</time>
+          <div class="text-lg font-black"> B.Tech in CSE from Durgapur Institute of Advanced Technology & Management,
+            WB
+          </div>
+          GPA: 8.8/10
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-end mb-10">
+          <time class="font-mono italic">2017-2020</time>
+          <div class="text-lg font-black">Diploma in Mechanical Engineering from K.K.Polytechnic, Dhanbad</div>
+          73.06 %
+        </div>
+        <hr />
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- page divider up -->
+  <div style="overflow: hidden">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
+          fill: #ff9500c4;
+          width: 100%;
+          height: 105px;
+          transform: rotate(180deg) scaleX(-1);
+        ">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+  <!-- page divider down -->
+
+  <div style="overflow: hidden;">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+      style="fill: #ff9500c4; width: 100%; height: 122px; transform: scaleX(-1);">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+
+  <!-- publications -->
+
+  <div id="publication" class="title">Publications</div>
+  <div class="mx-32 my-10" ><img  src="./photos/publications.jpg" alt="publication-image"> <a href="https://www.jetir.org/papers/JETIR2311559.pdf" target="_blank"><button class="btn btn-outline m-10 btn-warning">View Research Paper</button></a></div>
+
+
+   <!-- page divider up -->
+   <div style="overflow: hidden">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
+          fill: #fff700c4;
+          width: 100%;
+          height: 105px;
+          transform: rotate(180deg) scaleX(-1);
+        ">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+  <!-- page divider down -->
+
+  <div style="overflow: hidden;">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+      style="fill: #fff700c4; width: 100%; height: 122px; transform: scaleX(-1);">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+  <!-- Achievement -->
+
+  <div id="achievement" class="title">Achievement</div>
+  <div class="mx-32 my-10   " ><img  src="./photos/vishal-anwesha.jpg" alt="publication-image"></div>
+
+   <!-- page divider up -->
+   <div style="overflow: hidden">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
+          fill: #fff700c4;
+          width: 100%;
+          height: 105px;
+          transform: rotate(180deg) scaleX(-1);
+        ">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+  <!-- page divider down -->
+
+  <div style="overflow: hidden;">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+      style="fill: #fff700c4; width: 100%; height: 122px; transform: scaleX(-1);">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+
+  <!-- personal information -->
+
+  <div id="personal-info" class="title">Personal Information</div>
+  <div class=" my-10 w-full text-3xl">
+  <ul class="timeline timeline-vertical">
+    <li>
+      <div class="timeline-start">Father's Name</div>
+      <div class="timeline-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+      </div>
+      <div class="timeline-end timeline-box ">Rakesh Kumar</div>
+      <hr/>
+    </li>
+    <li>
+      <hr/>
+      <div class="timeline-start">DOB</div>
+      <div class="timeline-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+      </div>
+      <div class="timeline-end timeline-box ">11 September 1998</div>
+      <hr/>
+    </li>
+    <li>
+      <hr/>
+      <div class="timeline-start">Nationality</div>
+      <div class="timeline-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+      </div>
+      <div class="timeline-end timeline-box ">Indian</div>
+      <hr/>
+    </li>
+    <li>
+      <hr/>
+      <div class="timeline-start">Language</div>
+      <div class="timeline-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+      </div>
+      <div class="timeline-end timeline-box ">English, Hindi, Bengali</div>
+      <hr/>
+    </li>
+    <li>
+      <hr/>
+      <div class="timeline-start">Address</div>
+      <div class="timeline-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+      </div>
+      <div class="timeline-end timeline-box ">Chas, Bokaro, Jharkhand</div>
+      <hr/>
+    </li>
+   
+  </ul>
+</div>
+<div style="overflow: hidden">
+  <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
+        fill: #ff4400c4;
+        width: 100%;
+        height: 105px;
+        transform: rotate(180deg) scaleX(-1);
+      ">
+    <path
+      d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+      opacity=".25" />
+    <path
+      d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+      opacity=".5" />
+    <path
+      d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+  </svg>
+</div>
+
+<!-- page divider down -->
+
+<div style="overflow: hidden;">
+  <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+    style="fill: #ff4400c4; width: 100%; height: 122px; transform: scaleX(-1);">
+    <path
+      d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+      opacity=".25" />
+    <path
+      d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+      opacity=".5" />
+    <path
+      d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+  </svg>
+</div>
+
+<!-- contact me  -->
+
+<div id="contact-me" class="title">Contact Me</div>
+<div class="min-h-screen flex items-center justify-center">
+  <form class="w-full max-w-lg border-2 border-sky-500 p-8 rounded-lg shadow-lg">
+    <div class="mb-4 ">
+      <label class="block text-gray-600 text-sm font-bold mb-2" for="name">
+        Name
+      </label>
+      <input class="shadow appearance-none border border-sky-500 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-600 text-sm font-bold mb-2" for="email">
+        Email
+      </label>
+      <input class="shadow appearance-none border border-sky-500 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="you@example.com">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-600 text-sm font-bold mb-2" for="bio">
+        Bio
+      </label>
+      <textarea class="shadow appearance-none border border-sky-500 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline" id="bio" placeholder="A little about yourself..."></textarea>
+    </div>
+    <div class="flex items-center justify-between">
+      <button onclick="sendEmail()" class="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
