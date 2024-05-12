@@ -60,7 +60,7 @@ setInterval(changeWord, 4000);
     var email = document.getElementById('email').value;
     var bio = document.getElementById('bio').value;
 
-    var mailtoLink = 'mailto:vishal9304960503@gmail.com?subject=About Me Form Submission&body=' + 
+    var mailtoLink = `mailto:vishal9304960503@gmail.com?subject=About Me Form Submission from ${name}&body=` + 
       'Name: ' + encodeURIComponent(name) + 
       '%0AEmail: ' + encodeURIComponent(email) + 
       '%0ABio: ' + encodeURIComponent(bio);
