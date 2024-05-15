@@ -81,12 +81,10 @@
 }
 
 #projectCard {
-  margin: 5rem;
   display: flex;
-  gap: 1.6rem;
   justify-content: space-around;
   flex-wrap: wrap;
-}
+} 
 
 #card-details{
  overflow: hidden;
