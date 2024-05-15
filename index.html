@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style.css">
   <title>Vishal's Portfolio</title>
 </head>
 
 <body>
-  <div class="navbar bg-info-content sticky top-0 z-40">
+  <div class="navbar bg-info-content sticky top-0 z-40 max-w-screen w-screen sm:w-full md:w-full lg:w-full">
     <div class="navbar-start ">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -19,7 +19,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
+        <ul tabindex="0"
+          class="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 md:w-52">
           <li><a href="#home">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -69,8 +70,8 @@
   </div>
 
   <!-- Body  -->
-  <div id="home" class="hero min-h-screen" style="background-image: url('./photos/vishal-background.png')">
-    <div class="hero-content text-center text-base-content">
+  <div id="home" class="hero w-full bg-[url('./photos/vishal-background.png')]">
+    <div class="min-h-screen hero-content text-center text-base-content">
       <div class="max-w-md">
         <h1 class="mb-5 text-7xl font-bold">
           <span class="nameV">V</span>ishal <span class="nameK">K</span>umar
@@ -105,7 +106,7 @@
               alt="itzzmevishal" height="20" width="30" /></a>
         </p>
 
-        <a href="https://drive.google.com/file/d/1PoA6hx3PgPb_8Asj5v_3V9g1l5Rnb_7W/view?usp=drive_link "
+        <a href="https://drive.google.com/file/d/1mPiaiQmY7F0tMbVdV-c0ouGxoZjBMH_x/view?usp=drive_link "
           target="_blank"><button class="btn btn-primary">Download Resume</button></a>
       </div>
     </div>
@@ -129,7 +130,8 @@
   <!-- projects  -->
 
   <div id="projects" class="title">Projects</div>
-  <div id="projectCard">
+  <div id="projectCard" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 m-4 md:m-16">
+    <!-- Project cards go here -->
     <div id="card-height" class="card shadow-xl transition duration-300 ease-in-out delay-300 hover:scale-110">
       <figure>
         <img class="h-64 w-96 object-fill shadow-md" src="./photos/15_best_place_in_india.png" alt="Shoes" />
@@ -164,6 +166,7 @@
         </div>
       </div>
     </div>
+
 
     <div id="card-height" class="card  shadow-xl transition duration-300 ease-in-out delay-100 hover:scale-110">
       <figure>
@@ -230,17 +233,14 @@
   </div>
 
 
-
-  </div>
-
   <!-- page divider down  -->
   <div style="overflow: hidden">
     <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
-          fill: #bd11ca9c;
-          width: 100%;
-          height: 105px;
-          transform: rotate(180deg) scaleX(-1);
-        ">
+            fill: #bd11ca9c;
+            width: 100%;
+            height: 105px;
+            transform: rotate(180deg) scaleX(-1);
+          ">
       <path
         d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
         opacity=".25" />
@@ -269,143 +269,146 @@
 
   <!-- Skills -->
 
-  <div class="flex flex-col my-10 gap-5 h-auto w-full flex-wrap">
+  <div class="flex flex-col my-10 gap-4 h-auto w-full flex-wrap">
     <div id="skills" class="title">Skills</div>
-    <div class=" grid h-44 mx-20 card bg-base-300 rounded-box ">
-      <p class="mx-10 my-5 font-bold h-auto">Programming</p>
-      <div class="mx-10  flex gap-28 h-40 w-45rem flex-wrap">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-wrap gap-6 lg:gap-4 lg:justify-start m-5 md:m-16">
+      <!-- Skill cards go here -->
+      <div class="card bg-base-300 rounded-box">
+        <p class="mx-10 my-5 font-bold">Programming</p>
+        <div class="flex justify-center flex-wrap gap-5 px-5 pb-5">
+          <div class="text-center">
+            <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+              <img src="./skills-logo/html-5.png" alt="html5" width="80" height="80" />
+            </a>
+            HTML5
+          </div>
+          <!-- Other programming skills go here -->
+          <div class="text-center">
+            <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="./skills-logo/css.png"
+                alt="css3" width="80" height="80" /> </a>CSS
+          </div>
 
-        <div class="text-center">
-          <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="./skills-logo/html-5.png"
-              alt="html5" width="80" height="80" /></a>HTML5
-        </div>
+          <div class="text-center">
+            <a href="https://www.w3schools.com/js/" target="_blank" rel="noreferrer"> <img src="./skills-logo/js.png"
+                alt="css3" width="80" height="80" /> </a>JavaScript
+          </div>
 
-        <div class="text-center">
-          <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="./skills-logo/css.png"
-              alt="css3" width="80" height="80" /> </a>CSS
-        </div>
+          <div class="text-center">
+            <a href="https://www.w3schools.com/python/" target="_blank" rel="noreferrer"> <img
+                src="./skills-logo/python.png" alt="css3" width="80" height="80" /> </a>Python
+          </div>
 
-        <div class="text-center">
-          <a href="https://www.w3schools.com/js/" target="_blank" rel="noreferrer"> <img src="./skills-logo/js.png"
-              alt="css3" width="80" height="80" /> </a>JavaScript
-        </div>
-
-        <div class="text-center">
-          <a href="https://www.w3schools.com/python/" target="_blank" rel="noreferrer"> <img
-              src="./skills-logo/python.png" alt="css3" width="80" height="80" /> </a>Python
-        </div>
-
-        <div class="text-center">
-          <a href="https://www.w3schools.com/latex/" target="_blank" rel="noreferrer"> <img
-              src="https://static.javatpoint.com/tutorial/latex/images/latex-tutorial.png" alt="css3" width="80"
-              height="80" /> </a>Latex
-        </div>
-      </div>
-    </div>
-
-    <!-- skill-part-2 -->
-    <div class=" grid h-44 mx-20 card bg-base-300 rounded-box ">
-      <p class="mx-10 my-5 font-bold">Frameworks/Libraries</p>
-      <div class="mx-10  flex justify-between h-40 w-45rem flex-wrap">
-
-        <div class="text-center">
-          <a href="https://www.w3schools.com/react/" target="_blank" rel="noreferrer"> <img
-              src="./skills-logo/react.png" alt="html5" width="80" height="80" /></a>ReactJs
-        </div>
-
-        <div class="text-center">
-          <a href="https://www.javatpoint.com/react-redux" target="_blank" rel="noreferrer"> <img
-              src="./skills-logo/redux.png" alt="css3" width="80" height="80" /> </a>Redux
-        </div>
-
-        <div class="text-center">
-          <a href="https://www.w3schools.com/nodejs/" target="_blank" rel="noreferrer"> <img
-              src="./skills-logo/nodejs.png" alt="css3" width="80" height="80" /> </a>NodeJs
-        </div>
-
-        <div class="text-center">
-          <a href="https://expressjs.com/" target="_blank" rel="noreferrer"> <img
-              src="https://images.credly.com/images/1c2c86e1-16ce-4e4d-a425-d1ac96bb026d/express.png" alt="css3"
-              width="80" height="80" /> </a>ExpressJs
-        </div>
-
-        <div class="text-center">
-          <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/bootstrap.png"
-              alt="css3" width="80" height="80" /> </a>Bootstrap
-        </div>
-
-        <div class="text-center">
-          <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/tailwindcss.png"
-              alt="css3" width="80" height="80" /> </a>Tailwind CSS
-        </div>
-
-        <div class="text-center">
-          <a href="https://daisyui.com/" target="_blank" rel="noreferrer"> <img
-              src="https://img.daisyui.com/images/daisyui-logo/daisyui-logomark-1024-1024.png" alt="css3" width="80"
-              height="80" /> </a>DaisyUI
+          <div class="text-center">
+            <a href="https://www.w3schools.com/latex/" target="_blank" rel="noreferrer"> <img
+                src="https://static.javatpoint.com/tutorial/latex/images/latex-tutorial.png" alt="css3" width="80"
+                height="80" /> </a>Latex
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- skill-part-3 -->
+      <!-- skill-2  -->
 
-    <div class=" grid h-44 mx-20 card bg-base-300 rounded-box ">
-      <p class="mx-10 my-5 font-bold">Databases</p>
-      <div class="mx-10  flex gap-28 h-40 w-45rem flex-wrap">
-
-        <div class="text-center">
-          <a href="https://www.w3schools.com/mysql/" target="_blank" rel="noreferrer"> <img
-              src="./skills-logo/mysql.png" alt="html5" width="80" height="80" /></a>MySQL
-        </div>
-
-        <div class="text-center">
-          <a href="https://www.w3schools.com/mongodb/" target="_blank" rel="noreferrer"> <img
-              src="./skills-logo/mongodb.png" alt="css3" width="80" height="80" /> </a>MongoDB
+      <div class="card bg-base-300 rounded-box">
+        <p class="mx-10 my-5 font-bold">Frameworks/Libraries</p>
+        <div class="flex justify-center flex-wrap gap-5 px-5 pb-5">
+          <div class="text-center">
+            <a href="https://www.w3schools.com/react/" target="_blank" rel="noreferrer"> <img
+                src="./skills-logo/react.png" alt="html5" width="80" height="80" /></a>ReactJs
+          </div>
+  
+          <div class="text-center">
+            <a href="https://www.javatpoint.com/react-redux" target="_blank" rel="noreferrer"> <img
+                src="./skills-logo/redux.png" alt="css3" width="80" height="80" /> </a>Redux
+          </div>
+  
+          <div class="text-center">
+            <a href="https://www.w3schools.com/nodejs/" target="_blank" rel="noreferrer"> <img
+                src="./skills-logo/nodejs.png" alt="css3" width="80" height="80" /> </a>NodeJs
+          </div>
+  
+          <div class="text-center">
+            <a href="https://expressjs.com/" target="_blank" rel="noreferrer"> <img
+                src="https://images.credly.com/images/1c2c86e1-16ce-4e4d-a425-d1ac96bb026d/express.png" alt="css3"
+                width="80" height="80" /> </a>ExpressJs
+          </div>
+  
+          <div class="text-center">
+            <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/bootstrap.png"
+                alt="css3" width="80" height="80" /> </a>Bootstrap
+          </div>
+  
+          <div class="text-center">
+            <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/tailwindcss.png"
+                alt="css3" width="80" height="80" /> </a>Tailwind CSS
+          </div>
+  
+          <div class="text-center">
+            <a href="https://daisyui.com/" target="_blank" rel="noreferrer"> <img
+                src="https://img.daisyui.com/images/daisyui-logo/daisyui-logomark-1024-1024.png" alt="css3" width="80"
+                height="80" /> </a>DaisyUI
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- skill-part-4 -->
+      <!-- skills-3 -->
 
-    <div class=" grid h-44 mx-20 card bg-base-300 rounded-box ">
-      <p class="mx-10 my-5 font-bold">Tools</p>
-      <div class="mx-10  flex justify-between h-40 w-45rem flex-wrap">
-
-        <div class="text-center">
-          <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"> <img
-              src="https://code.visualstudio.com/assets/images/code-stable.png" alt="html5" width="80"
-              height="80" /></a>VS Code
+      <div class="card bg-base-300 rounded-box">
+        <p class="mx-10 my-5 font-bold">Databases</p>
+        <div class="flex justify-center flex-wrap gap-5 px-5 pb-5">
+          <div class="text-center">
+            <a href="https://www.w3schools.com/mysql/" target="_blank" rel="noreferrer"> <img
+                src="./skills-logo/mysql.png" alt="html5" width="80" height="80" /></a>MySQL
+          </div>
+  
+          <div class="text-center">
+            <a href="https://www.w3schools.com/mongodb/" target="_blank" rel="noreferrer"> <img
+                src="./skills-logo/mongodb.png" alt="css3" width="80" height="80" /> </a>MongoDB
+          </div>
         </div>
-
-        <div class="text-center">
-          <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/git.png" alt="css3"
-              width="80" height="80" /> </a>Git
-        </div>
-
-        <div class="text-center">
-          <a href="https://www.canva.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/canva.png"
-              alt="css3" width="80" height="80" /> </a>Canva
-        </div>
-
-        <div class="text-center">
-          <a href="https://www.sketch.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/sketch.png"
-              alt="css3" width="80" height="80" /> </a>Sketch
-        </div>
-
-        <div class="text-center">
-          <a href="https://www.office.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/msOffice.png"
-              alt="css3" width="80" height="80" /> </a>MS Office
-        </div>
-
-        <div class="text-center">
-          <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img
-              src="./skills-logo/photoshop.png" alt="photoshop" width="80" height="80" /> </a>Photoshop
-        </div>
-
       </div>
+
+      <!-- skills-4 -->
+
+      <div class="card bg-base-300 rounded-box">
+        <p class="mx-10 my-5 font-bold">Tools</p>
+        <div class="flex justify-center flex-wrap gap-5 px-5 pb-5">
+          <div class="text-center">
+            <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"> <img
+                src="https://code.visualstudio.com/assets/images/code-stable.png" alt="html5" width="80"
+                height="80" /></a>VS Code
+          </div>
+  
+          <div class="text-center">
+            <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/git.png" alt="css3"
+                width="80" height="80" /> </a>Git
+          </div>
+  
+          <div class="text-center">
+            <a href="https://www.canva.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/canva.png"
+                alt="css3" width="80" height="80" /> </a>Canva
+          </div>
+  
+          <div class="text-center">
+            <a href="https://www.sketch.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/sketch.png"
+                alt="css3" width="80" height="80" /> </a>Sketch
+          </div>
+  
+          <div class="text-center">
+            <a href="https://www.office.com/" target="_blank" rel="noreferrer"> <img src="./skills-logo/msOffice.png"
+                alt="css3" width="80" height="80" /> </a>MS Office
+          </div>
+  
+          <div class="text-center">
+            <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img
+                src="./skills-logo/photoshop.png" alt="photoshop" width="80" height="80" /> </a>Photoshop
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
+  
   <!-- page divider up -->
   <div style="overflow: hidden">
     <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
@@ -523,11 +526,13 @@
   <!-- publications -->
 
   <div id="publication" class="title">Publications</div>
-  <div class="mx-32 my-10" ><img  src="./photos/publications.jpg" alt="publication-image"> <a href="https://www.jetir.org/papers/JETIR2311559.pdf" target="_blank"><button class="btn btn-outline m-10 btn-warning">View Research Paper</button></a></div>
+  <div class="mx-32 my-10"><img src="./photos/publications.jpg" alt="publication-image"> <a
+      href="https://www.jetir.org/papers/JETIR2311559.pdf" target="_blank"><button
+        class="btn btn-outline m-10 btn-warning">View Research Paper</button></a></div>
 
 
-   <!-- page divider up -->
-   <div style="overflow: hidden">
+  <!-- page divider up -->
+  <div style="overflow: hidden">
     <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
           fill: #fff700c4;
           width: 100%;
@@ -564,10 +569,10 @@
   <!-- Achievement -->
 
   <div id="achievement" class="title">Achievement</div>
-  <div class="mx-32 my-10   " ><img  src="./photos/vishal-anwesha.jpg" alt="publication-image"></div>
+  <div class="mx-32 my-10   "><img src="./photos/vishal-anwesha.jpg" alt="publication-image"></div>
 
-   <!-- page divider up -->
-   <div style="overflow: hidden">
+  <!-- page divider up -->
+  <div style="overflow: hidden">
     <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
           fill: #fff700c4;
           width: 100%;
@@ -604,130 +609,155 @@
   <!-- personal information -->
 
   <div id="personal-info" class="title">Personal Information</div>
-  <div class=" my-10 w-full text-3xl">
-  <ul class="timeline timeline-vertical">
-    <li>
-      <div class="timeline-start">Father's Name</div>
-      <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-      </div>
-      <div class="timeline-end timeline-box ">Rakesh Kumar</div>
-      <hr/>
-    </li>
-    <li>
-      <hr/>
-      <div class="timeline-start">DOB</div>
-      <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-      </div>
-      <div class="timeline-end timeline-box ">11 September 1998</div>
-      <hr/>
-    </li>
-    <li>
-      <hr/>
-      <div class="timeline-start">Nationality</div>
-      <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-      </div>
-      <div class="timeline-end timeline-box ">Indian</div>
-      <hr/>
-    </li>
-    <li>
-      <hr/>
-      <div class="timeline-start">Language</div>
-      <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-      </div>
-      <div class="timeline-end timeline-box ">English, Hindi, Bengali</div>
-      <hr/>
-    </li>
-    <li>
-      <hr/>
-      <div class="timeline-start">Address</div>
-      <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-      </div>
-      <div class="timeline-end timeline-box ">Chas, Bokaro, Jharkhand</div>
-      <hr/>
-    </li>
-   
-  </ul>
-</div>
-<div style="overflow: hidden">
-  <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
+  <div class=" my-5 w-full text-3xl">
+    <ul class="timeline timeline-vertical">
+      <li>
+        <div class="timeline-start">Father's Name</div>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box ">Rakesh Kumar</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-start">DOB</div>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box ">11 September 1998</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-start">Nationality</div>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box ">Indian</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-start">Language</div>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box ">English, Hindi, Bengali</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-start">Address</div>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box ">Chas, Bokaro, Jharkhand</div>
+        <hr />
+      </li>
+
+    </ul>
+  </div>
+  <div style="overflow: hidden">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="
         fill: #ff4400c4;
         width: 100%;
         height: 105px;
         transform: rotate(180deg) scaleX(-1);
       ">
-    <path
-      d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
-      opacity=".25" />
-    <path
-      d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
-      opacity=".5" />
-    <path
-      d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
-  </svg>
-</div>
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
 
-<!-- page divider down -->
+  <!-- page divider down -->
 
-<div style="overflow: hidden;">
-  <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
-    style="fill: #ff4400c4; width: 100%; height: 122px; transform: scaleX(-1);">
-    <path
-      d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
-      opacity=".25" />
-    <path
-      d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
-      opacity=".5" />
-    <path
-      d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
-  </svg>
-</div>
+  <div style="overflow: hidden;">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+      style="fill: #ff4400c4; width: 100%; height: 122px; transform: scaleX(-1);">
+      <path
+        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+        opacity=".25" />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5" />
+      <path
+        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
 
-<!-- contact me  -->
+  <!-- contact me  -->
 
-<div id="contact-me" class="title">Contact Me</div>
-<div class="min-h-68 my-20 flex items-center justify-center">
-  <form class="w-full max-w-lg border-2 border-sky-500 p-8 rounded-lg shadow-lg">
-    <div class="mb-4 ">
-      <label class="block text-gray-600 text-sm font-bold mb-2" for="name">
-        Name
-      </label>
-      <input class="shadow appearance-none border border-sky-500 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-600 text-sm font-bold mb-2" for="email">
-        Email
-      </label>
-      <input class="shadow appearance-none border border-sky-500 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="you@example.com">
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-600 text-sm font-bold mb-2" for="bio">
-        Bio
-      </label>
-      <textarea class="shadow appearance-none border border-sky-500 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline" id="bio" placeholder="A little about yourself..."></textarea>
-    </div>
-    <div class="flex items-center justify-between">
-      <button onclick="sendEmail()" class="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-        Submit
-      </button>
-    </div>
-  </form>
-</div>
+  <div id="contact-me" class="title">Contact Me</div>
+  <div class="min-h-68 my-20 flex items-center justify-center m-5">
+    <form class="w-full max-w-lg border-2 border-sky-500 p-8 rounded-lg shadow-lg">
+      <div class="mb-4 ">
+        <label class="block text-gray-600 text-sm font-bold mb-2" for="name">
+          Name
+        </label>
+        <input
+          class="shadow appearance-none border border-sky-500 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+          id="name" type="text" placeholder="Your Name">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-600 text-sm font-bold mb-2" for="email">
+          Email
+        </label>
+        <input
+          class="shadow appearance-none border border-sky-500 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+          id="email" type="email" placeholder="you@example.com">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-600 text-sm font-bold mb-2" for="bio">
+          Bio
+        </label>
+        <textarea
+          class="shadow appearance-none border border-sky-500 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+          id="bio" placeholder="A little about yourself..."></textarea>
+      </div>
+      <div class="flex items-center justify-between">
+        <button onclick="sendEmail()"
+          class="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
 
-<div style="overflow: hidden;">
-  <svg
-    preserveAspectRatio="none"
-    viewBox="0 0 1200 120"
-    xmlns="http://www.w3.org/2000/svg"
-    style="fill: #005be3; width: 121%; height: 70px; transform: rotate(180deg);"
-  >
-    <path d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z" />
-  </svg>
-</div>
+  <div style="overflow: hidden;">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+      style="fill: #005be3; width: 121%; height: 70px; transform: rotate(180deg);">
+      <path
+        d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z" />
+    </svg>
+  </div>
 
   <script src="./script.js"></script>
 </body>
